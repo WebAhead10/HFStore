@@ -4,7 +4,7 @@ import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import MovieIcon from "@material-ui/icons/Movie";
 import SearchIcon from "@material-ui/icons/Search";
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
@@ -27,9 +27,8 @@ export default function SimpleBottomNavigation() {
       history.push("/");
     } else if (value === 1) {
       history.push("/search");
-    }
-    else{
-      history.push('/favorite')
+    } else {
+      history.push("/favorite");
     }
   }, [value, history]);
 
