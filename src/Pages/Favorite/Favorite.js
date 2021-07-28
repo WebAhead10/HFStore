@@ -1,4 +1,4 @@
-const Home = () => {
+const Favorite = () => {
     return (
         <div>
             
@@ -6,4 +6,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Favorite
