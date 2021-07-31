@@ -46,7 +46,6 @@ export default function SimpleBottomNavigation() {
         label="Movies"
         icon={<MovieIcon />}
       />
-
       <BottomNavigationAction
         style={{ color: "white" }}
         label="Search"

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import SingleContent from "../../components/SingleContent/SingleContent";
 import CustomPagination from "../../components/Pagination/CustomPagination";
 import "./Movies.css";
-const Movies = () => {
+const Movies = ({setFav}) => {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
   const [numOfPages, setNumOfPages] = useState();
@@ -36,6 +36,7 @@ const Movies = () => {
               date={c.first_air_date || c.release_date}
               media_type="movie"
               vote_average={c.vote_average}
+              setFav={setFav}
             />
           ))}
       </div>

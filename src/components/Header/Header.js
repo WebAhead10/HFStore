@@ -7,5 +7,4 @@ const Header = () => {
     </span>
   );
 };
-
 export default Header;

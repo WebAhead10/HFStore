@@ -12,7 +12,7 @@ import axios from "axios";
 import CustomPagination from "../../components/Pagination/CustomPagination";
 import SingleContent from "../../components/SingleContent/SingleContent";
 
-const Search = () => {
+const Search = ({setFav}) => {
   const [type, setType] = useState(0);
   const [searchText, setSearchText] = useState("");
   const [page, setPage] = useState(1);
@@ -89,13 +89,11 @@ const Search = () => {
               poster={c.poster_path}
               title={c.title || c.name}
               date={c.first_air_date || c.release_date}
-              media_type={type ? "tv" : "movie"}
               vote_average={c.vote_average}
+              setFav={setFav}
             />
           ))}
-        {searchText &&
-          !content &&
-          (type ? <h2>No Series Found</h2> : <h2>No Movies Found</h2>)}
+
       </div>
       {numOfPages > 1 && (
         <CustomPagination setPage={setPage} numOfPages={numOfPages} />
